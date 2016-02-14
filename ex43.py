@@ -235,18 +235,37 @@ class Finished(Scene):
         print "Hurray! Victory is yours!"
         return 'finished'
 
+# make a class "Map" that has-a:
 class Map(object):
 
+    # attribute
+    scenes = {
+        'central_corridor': CentralCorridor(),
+        'laser_weapon_armory': LaserWeaponArmory(),
+        'the_bridge': TheBridge(),
+        'escape_pod': EscapePod(),
+        'death': Death(),
+        'finished': Finished(),
+        'running': Running()
+    }
+
+    # _init_ with self and start_scene parameters
     def __init__(self, start_scene):
-        pass
+        self.start_scene = start_scene
 
+    # function "next_scene" that takes self and scene_name parameters
     def next_scene(self, scene_name):
-        pass
+        val = Map.scenes.get(scene_name)
+        return val
 
+    # function "opening_scene" with self
     def opening_scene(self):
-        pass
+        return self.next_scene(self.start_scene)
 
 
+# set "a_map" to an instance of class "Map" with central_corridor parameter
 a_map = Map('central_corridor')
+# set "a_game" to an instance of class "Engine" with "a_map" parameter
 a_game = Engine(a_map)
+# from class "a_game" get function "play" and run it!
 a_game.play()

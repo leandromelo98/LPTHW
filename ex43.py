@@ -31,22 +31,22 @@ class Engine(object):
         current_scene.enter()
 
 
-# make a class "Death" that is-a "Scene" which has function "enter" with self parameter
+# make a class "Death" that is-a "Scene" with "enter" with self parameter
 class Death(Scene):
 
-    quips = [
+    end = [
          "The scythe of death has reached you. Adios...",
          "Do better next time!",
          "You can do better than that! Come on!",
          "Our highly esteemed hero...Please try again and save the world!",
          "The icy cold clammy hand from underground dragged you to death..."
          "Bye...",
-         "Hades has invited you to his kingdom where no one can escape back out",
+         "Hades has invited you to his kingdom where no one can escape..",
          "Welcome to eternal Tartarus...."
     ]
 
     def enter(self):
-        print Death.quips[randint(0, len(self.quips)-1)]
+        print Death.end[randint(0, len(self.end)-1)]
         exit(1)
 
 
@@ -75,14 +75,14 @@ class CentralCorridor(Scene):
         action = raw_input("> ")
 
         if "run" in action:
-            print "With your fastest run, you tried to escape!
+            print "With your fastest run, you tried to escape!"
             print "You ran as hard as you can!"
-            print "The hungry Cyclops's not gonna miss you cuz he's hugggrryyy."
-            print "While you ran a yard he ran a mile.
+            print "The hungry Cyclops's not gonna miss you cuz he's huggrryy."
+            print "While you ran a yard he ran a mile."
             print "Within a single blink of your eyes"
             print "he's in front of you.\n"
             print "'Hey, boy,' said he.\n"
-            print "'Wut, wut is it!? What do you want from me!?,
+            print "'Wut, wut is it!? What do you want from me!?,'"
             print "said Hercules.\n"
             print "'I'm going to eat you like a piece of cake."
             print "Yum,' replied the Cyclops.\n"
@@ -91,19 +91,19 @@ class CentralCorridor(Scene):
         elif "fight" in action:
             print "Like the world's strongest demi-god, you fight."
             print "You draw your sword and dash toward him,"
-            print "THUMP! You got his back.You first blind him with your sword."
+            print "THUMP! You got his back."
+            print "You first blind him with your sword."
             print "The cool blade creates an intersection with his neck."
             print "PSHSHSHSH."
-            print "The spring of blood soaksyou."
+            print "The spring of blood soaks you."
             print "The big nuisance is down! You can proceed to Mount Olympus"
-            print "You wake up shortly after only to die as the Gothon stomps on"
-            print "your head and eats you."
+
             return 'laser_weapon_armory'
         elif "tell" in action:
             print "You try to tell the Cyclops joke you know:"
-            print "\n 'Wait, what languages does he speak?...hmmm...'\n "
-            print "While you were thinking,"
-            print "a humongous hand reached out to you."
+            print ""
+            print "'Wait, what languages does he speak?...hmmm...'\n "
+            print "While you were thinking, a humongous hand reached you."
             print "Grabbbb!!!!Squeeze!!!Too strong!!!!!"
             print "You can't move. Then, he swallowed you.\nDeath."
             return 'death'
@@ -163,7 +163,7 @@ class TheBridge(Scene):
 
         action = raw_input("> ")
 
-        if "Titans" in action or "titans" in action:
+        if "Titan" in action or "titan" in action:
             print "With your Pikachu Lightning Bolt, you strike the Titans!\n"
             print "'Pikachu, bolt attack!' roared Hercules.\n"
             print "The Titans fell down. They died because of electric shock"
@@ -190,7 +190,8 @@ class TheBridge(Scene):
             print "You such a coward."
             print "The Titans killed every gods."
             print "Since the ferocious Titans are ruling the world as gods,"
-            print "The earth committed suicide by destroying itself with its own"
+            print "The earth committed suicide"
+            print "by destroying itself with its own"
             print "gravitational force."
             print "It became a blackhole, and everyone died."
             return 'death'
@@ -207,11 +208,11 @@ class EscapePod(Scene):
         print "Now that all gods are saved,"
         print "you have go to the gate of Tartarus and close it again."
         print "You rush down the mountain desperately trying to make it to"
-        print "the gate of Tartarus before the Titans regenerate
+        print "the gate of Tartarus before the Titans regenerate"
         print "and reappear on Olympus. You reach down to"
         print "the gate of Tartarus. When you were about to shut the gate,"
         print "you saw your mom in Tartarus."
-        print "\nYou can hardly believe that she's in there,
+        print "\nYou can hardly believe that she's in there,"
         print "and you start to weep."
         print "What would you do?"
         print "Would you [shut the gate] for the world's sake? or"

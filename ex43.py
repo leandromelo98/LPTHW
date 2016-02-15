@@ -39,8 +39,9 @@ class Death(Scene):
          "Do better next time!",
          "You can do better than that! Come on!",
          "Our highly esteemed hero...Please try again and save the world!",
-         "The icy cold clammy hand from underground dragged you to death...Bye...",
-         "Hades has invited you to his kingdom where no one can escape back out again",
+         "The icy cold clammy hand from underground dragged you to death..."
+         "Bye...",
+         "Hades has invited you to his kingdom where no one can escape back out",
          "Welcome to eternal Tartarus...."
     ]
 
@@ -58,12 +59,15 @@ class CentralCorridor(Scene):
         print "Other gods have been killed or escaped. Even taken captive!"
         print "You are the chosen one to save the Olympus and your"
         print "mission is to get the 'Lightning Bolt' from Zeus's room,"
-        print "strike the Titans with it, and rescue the helpless gods and goddesses to the "
+        print "strike the Titans with it,"
+        print "and rescue the helpless gods and goddesses to the "
         print "top of the Olympus."
         print "\n"
-        print "You are running down the streets of Oedipus to head toward Mount Olympus."
+        print "You are running down the streets of Oedipus"
+        print "to head toward Mount Olympus."
         print "On the way to Olympus, you meet a one-eyed Cyclops."
-        print "He approached you with green slimy skin, grinding his teeth, drooling, and one eye."
+        print "He approached you with green slimy skin, grinding his teeth,"
+        print "drooling, and one eye."
         print "He's blocking the way to the Olympus. What would you do?"
         print "You have a sword and a shield that Athena gave you as gifts."
         print "Will you [fight him] or [run away] or [tell a joke] ?"
@@ -71,18 +75,24 @@ class CentralCorridor(Scene):
         action = raw_input("> ")
 
         if "run" in action:
-            print "With your fastest run, you tried to escape! You ran as hard as you can!"
-            print "The hungry Cyclops's not gonna miss you cuz he's huuuuunnnnggggggrrryyy."
-            print "While you ran a yard he ran a mile. Within a single blink of your eyes"
+            print "With your fastest run, you tried to escape!
+            print "You ran as hard as you can!"
+            print "The hungry Cyclops's not gonna miss you cuz he's hugggrryyy."
+            print "While you ran a yard he ran a mile.
+            print "Within a single blink of your eyes"
             print "he's in front of you.\n"
             print "'Hey, boy,' said he.\n"
-            print "'Wut, wut is it!? What do you want from me!?,' said Hercules.\n"
-            print "'I'm going to eat you like a piece of cake. Yum,' replied the Cyclops.\n"
+            print "'Wut, wut is it!? What do you want from me!?,
+            print "said Hercules.\n"
+            print "'I'm going to eat you like a piece of cake."
+            print "Yum,' replied the Cyclops.\n"
             print "Without letting you reply, he eats you. You are dead.  "
             return 'death'
         elif "fight" in action:
-            print "Like the world's strongest demi-god, you fight. You draw your sword and dash toward him,"
-            print "THUMP! You got his back. You first blind him with your sword. The cool blade creates an intersection with his neck."
+            print "Like the world's strongest demi-god, you fight."
+            print "You draw your sword and dash toward him,"
+            print "THUMP! You got his back.You first blind him with your sword."
+            print "The cool blade creates an intersection with his neck."
             print "PSHSHSHSH."
             print "The spring of blood soaksyou."
             print "The big nuisance is down! You can proceed to Mount Olympus"
@@ -92,7 +102,8 @@ class CentralCorridor(Scene):
         elif "tell" in action:
             print "You try to tell the Cyclops joke you know:"
             print "\n 'Wait, what languages does he speak?...hmmm...'\n "
-            print "While you were thinking, a humongous hand reached out to you."
+            print "While you were thinking,"
+            print "a humongous hand reached out to you."
             print "Grabbbb!!!!Squeeze!!!Too strong!!!!!"
             print "You can't move. Then, he swallowed you.\nDeath."
             return 'death'
@@ -108,7 +119,7 @@ class LaserWeaponArmory(Scene):
         print "Here you are at the Mount Olympus."
         print "You see no one in the Counicl Square of the Olympus."
         print "You see no one in the room of Zeus."
-        print "However, you see a golden chest along with a golden apple of Aphrodite."
+        print "However, you see a golden chest."
         print "What will you do?"
         print "Will you [strike the chest] or [open the chest] or [move on]"
 
@@ -119,7 +130,8 @@ class LaserWeaponArmory(Scene):
             print "You got mad and striked the chest multiple times"
             print "Clang!"*4
             print "You striked the chest %d times." % (randint(1, 10000))
-            print "You were too loud. The furious Titans came and dragged you to Tartarus."
+            print "You were too loud."
+            print "The furious Titans came and dragged you to Tartarus."
             return 'death'
         elif "open" in do_what:
             print "All you had to do was just simply open!"
@@ -146,7 +158,7 @@ class TheBridge(Scene):
         print "You see those evil Titans trying to swallow the Olympus gods."
         print "You are so mad right now."
         print "What action do you take now?!"
-        print "Will you [strike Lightning at the Titans] or [strike the gods] or"
+        print "Will you [strike Titans with Lightning] or [strike the gods] or"
         print "[run away] ?"
 
         action = raw_input("> ")
@@ -155,14 +167,17 @@ class TheBridge(Scene):
             print "With your Pikachu Lightning Bolt, you strike the Titans!\n"
             print "'Pikachu, bolt attack!' roared Hercules.\n"
             print "The Titans fell down. They died because of electric shock"
-            print "The cloaks of the gods and the goddesses were made of rubber (inductor)"
+            print "The cloaks of the gods and the goddesses"
+            print "were made of rubber (inductor)"
             print "so they survived from the flowing electricity.\n"
             return 'escape_pod'
 
         elif "god" in action:
-            print "The cloaks of the gods and the goddesses were made of rubber (inductor)"
+            print "The cloaks of the gods and the goddesses"
+            print "were made of rubber (inductor)"
             print "so they survived from the flowing electricity.\n"
-            print "Because you were foolish to attack your allies instead of attacking the enemies,"
+            print "Because you were foolish to attack your allies"
+            print "instead of attacking the enemies,"
             print "your enemies swallowed your allies.\n"
             print "Now, they are coming after you"
             print "THUMP " * 8
@@ -189,11 +204,15 @@ class TheBridge(Scene):
 class EscapePod(Scene):
 
     def enter(self):
-        print "Now that all gods are saved, you have go to the gate of Tartarus and close it again."
+        print "Now that all gods are saved,"
+        print "you have go to the gate of Tartarus and close it again."
         print "You rush down the mountain desperately trying to make it to"
-        print "the gate of Tartarus before the Titans regenerate and reappear on Olympus. You reach down to"
-        print "the gate of Tartarus. When you were about to shut the gate, you saw your mom in Tartarus."
-        print "\nYou can hardly believe that she's in there, and you start to weep."
+        print "the gate of Tartarus before the Titans regenerate
+        print "and reappear on Olympus. You reach down to"
+        print "the gate of Tartarus. When you were about to shut the gate,"
+        print "you saw your mom in Tartarus."
+        print "\nYou can hardly believe that she's in there,
+        print "and you start to weep."
         print "What would you do?"
         print "Would you [shut the gate] for the world's sake? or"
         print "Would you [go in to meet your mom] for your sake?"
@@ -202,7 +221,8 @@ class EscapePod(Scene):
 
         if "shut" in hesitate:
             print "You ignored your mom and shut the gate"
-            print "You hear her cry, but that's okay because you are such a nice son."
+            print "You hear her cry,"
+            print "but that's okay because you are such a nice son."
             print "GOOD JOB shutting your own mom off for the world's sake."
             print "Wheeeee~~~~You saved the world!"
             return 'finished'
@@ -213,7 +233,8 @@ class EscapePod(Scene):
             print "BUT THEN!!"
             print "She suddenly disappeared!"
             print "Oh man! It was a hallucination!"
-            print "Since you failed to shut the gate, the Titans conquered the world."
+            print "Since you failed to shut the gate,"
+            print "the Titans conquered the world."
             print "Plus, you died."
             return 'death'
 

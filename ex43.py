@@ -2,6 +2,7 @@
 from sys import exit
 from random import randint
 
+
 # class that has-a function "enter" that takes self parameter
 class Scene(object):
 
@@ -34,7 +35,7 @@ class Engine(object):
 class Death(Scene):
 
     quips = [
-        "The scythe of death has reached you. Adios...",
+         "The scythe of death has reached you. Adios...",
          "Do better next time!",
          "You can do better than that! Come on!",
          "Our highly esteemed hero...Please try again and save the world!",
@@ -46,6 +47,7 @@ class Death(Scene):
     def enter(self):
         print Death.quips[randint(0, len(self.quips)-1)]
         exit(1)
+
 
 # make a class "CentralCorridor" that is-a "Scene" that has a function "enter"
 class CentralCorridor(Scene):
@@ -198,7 +200,6 @@ class EscapePod(Scene):
 
         hesitate = raw_input("> ")
 
-
         if "shut" in hesitate:
             print "You ignored your mom and shut the gate"
             print "You hear her cry, but that's okay because you are such a nice son."
@@ -216,16 +217,18 @@ class EscapePod(Scene):
             print "Plus, you died."
             return 'death'
 
+
 # make a class "running" that is-a "Scene"
 class Running(Scene):
 
     def enter(self):
         print "You are being chased!"
         print "You are running!"
-        print "Running" * (randint(1,9))
+        print "Running" * (randint(1, 9))
         print "But eventually you were caught."
         print "You died"
         return 'death'
+
 
 # make a class "Finished" that is-a "Scene"
 class Finished(Scene):
@@ -234,6 +237,7 @@ class Finished(Scene):
         print "You saved the world!"
         print "Hurray! Victory is yours!"
         return 'finished'
+
 
 # make a class "Map" that has-a:
 class Map(object):
